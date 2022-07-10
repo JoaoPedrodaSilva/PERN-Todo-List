@@ -3,7 +3,7 @@ import { useGlobalContext } from '../globalContext'
 import axios from '../axios'
 
 const AddTodoForm = () => {
-  const {description, setDescription} = useGlobalContext()
+  const { description, setDescription } = useGlobalContext()
 
   useEffect(() => {
     setDescription('')
@@ -11,7 +11,7 @@ const AddTodoForm = () => {
 
   const handleAdd = async event => {
     event.preventDefault()
-    if(description != '') {
+    if (description != '') {
       try {
         await axios.post('/', {
           description: description
@@ -22,13 +22,15 @@ const AddTodoForm = () => {
       }
     } else {
       alert('Error: Type something!')
-    }   
+    }
   }
 
   return (
     <form
-      className=' w-full flex items-center justify-center gap-5
-                py-6 text-md'
+      className='
+      flex items-center justify-center gap-5
+      w-full
+      py-6 text-md'
     >
 
       <input
@@ -41,8 +43,9 @@ const AddTodoForm = () => {
         id='todo-input'
         type="text"
         placeholder='Type your todo here...'
+        maxlength='75'
         value={description}
-        onChange={event => setDescription(event.target.value)}        
+        onChange={event => setDescription(event.target.value)}
       />
 
       <button
@@ -53,7 +56,7 @@ const AddTodoForm = () => {
         type='submit'
         onClick={event => handleAdd(event)}
       >
-          Add
+        Add
       </button>
 
     </form>
