@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export default axios.create({
-    baseURL: 'http://localhost:3000/api/todos'
+    baseURL: 'https://joaopedro-pern-todolist.herokuapp.com/api/todos'
 })
