@@ -1,8 +1,8 @@
 require("dotenv").config()
-const cors = require("cors")
-const db = require("./db")
 const express = require("express")
 const app = express()
+const cors = require("cors")
+const db = require("./db")
 
 //midlleware that prevents CORS error due the different ports of server and client
 app.use(cors())
