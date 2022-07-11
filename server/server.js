@@ -82,6 +82,10 @@ app.delete("/api/todos/:id", async (req, res) => {
             'DELETE FROM todo WHERE id = $1',
             [req.params.id]
         )
+
+        res.status(204).json({
+            status: "success"
+        })
     } catch (error) {
         console.error(error.message)
     }
