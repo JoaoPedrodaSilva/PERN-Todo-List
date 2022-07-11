@@ -43,7 +43,7 @@ const AddTodoForm = () => {
         id='todo-input'
         type="text"
         placeholder='Type your todo here...'
-        maxlength='75'
+        maxLength='75'
         value={description}
         onChange={event => setDescription(event.target.value)}
       />

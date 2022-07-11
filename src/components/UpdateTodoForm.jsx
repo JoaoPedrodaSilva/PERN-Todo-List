@@ -47,7 +47,7 @@ const UpdateTodoForm = () => {
                               text-gray-700 leading-tight
                               focus:outline-1 focus:outline-blue-400'
                     value={selectedTodo.description}
-                    maxlength='75'
+                    maxLength='75'
                     onChange={event => {
                       setSelectedTodo({
                         id: selectedTodo.id,
