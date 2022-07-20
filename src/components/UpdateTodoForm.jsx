@@ -7,7 +7,6 @@ const UpdateTodoForm = () => {
 
   const handleUpdate = async event => {
     event.preventDefault()
-    console.log(selectedTodo.description)
     try {
       await axios.put(`/${selectedTodo.id}`, {
         description: selectedTodo.description
